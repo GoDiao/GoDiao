@@ -19,14 +19,14 @@
 
 ## About Me
 
-I am an AI/ML researcher pursuing an M.Sc. in Electrical & Electronic Engineering at NTU Singapore.  
-My interests sit at the intersection of **multimodal intelligence, LLM systems, and agentic workflows**, with a strong preference for building systems that are both technically interesting and operationally useful.
+I am an AI/ML researcher pursuing an M.Sc. in Electrical & Electronic Engineering at NTU Singapore, where I also earned my B.Eng. in the same field.
+My interests sit at the intersection of **object detection, multimodal intelligence, LLM systems, and agentic workflows**, with a strong preference for building systems that are both technically interesting and operationally useful.
 
 ## Experience
 
 ### Huawei Singapore Research Center
-**Video & Audio Research Engineer Intern** · Jul 2025 – Dec 2025  
-Worked on computational photography, LLM inference systems, embodied AI, and agentic driving systems. Contributed across RGB-to-RAW reconstruction, KV cache optimization on Ascend 910B, VLA/RAW-to-action training, and end-to-end agent stack migration for autonomous driving workloads.
+**Algorithm Research Engineer Intern** · Jul 2025 – Dec 2025  
+Worked on computational photography, LLM inference systems, embodied AI, and agentic driving systems. Contributed across RGB-to-RAW reconstruction, KV cache optimization on Ascend 910B, VLA/RAW-to-action training, and end-to-end agent stack migration for autonomous driving workloads. **Outstanding R&D Contribution Award (team)**
 
 ### Infineon Technologies
 **Chip Verification Engineer Intern** · Dec 2022 – Jul 2023  
