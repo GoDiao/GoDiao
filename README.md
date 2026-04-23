@@ -36,30 +36,21 @@ Built Tcl/Python automation tools to optimize verification workflows and reduce 
 
 ## Featured Builds
 
-### `oc-loop`
-**Resumable loop plugin · OpenCode workflow tooling**  
-A resumable loop plugin for opencode built around `/oc-loop` and `/oc-watch`, designed to make iterative agent workflows more persistent, controllable, and practical in daily use.  
-**Repo:** [GoDiao/oc-loop](https://github.com/GoDiao/oc-loop)
-
-### `ai-interview-agent`
-**Interview simulation · AI agent application**  
-An AI-powered interview preparation agent that helps with question generation, structured practice, and feedback loops for technical interview training.  
-**Repo:** [GoDiao/ai-interview-agent](https://github.com/GoDiao/ai-interview-agent)
-
-### `Paper-Reader`
-**Academic paper analysis · Multi-agent system**  
-A hierarchical multi-agent academic paper reading system with an interactive web interface, built to help parse, structure, and summarize complex research papers more efficiently.  
-**Repo:** [GoDiao/Paper-Reader](https://github.com/GoDiao/Paper-Reader)
+| Project | Description | Stars |
+|---------|-------------|-------|
+| [oc-loop](https://github.com/GoDiao/oc-loop) | Resumable loop plugin for opencode with `/oc-loop` and `/oc-watch`, designed to make iterative agent workflows more persistent and practical. | ![stars](https://img.shields.io/github/stars/GoDiao/oc-loop?style=flat-square&color=38BDF8&labelColor=1e293b) |
+| [ai-interview-agent](https://github.com/GoDiao/ai-interview-agent) | AI-powered interview preparation agent with structured questioning, feedback loops, and technical interview simulation. | ![stars](https://img.shields.io/github/stars/GoDiao/ai-interview-agent?style=flat-square&color=38BDF8&labelColor=1e293b) |
+| [Paper-Reader](https://github.com/GoDiao/Paper-Reader) | Hierarchical multi-agent academic paper analysis system with an interactive web interface for reading and summarizing research papers. | ![stars](https://img.shields.io/github/stars/GoDiao/Paper-Reader?style=flat-square&color=38BDF8&labelColor=1e293b) |
 
 ---
 
 ## Open Source Highlights
 
-- **paperclip** — Open-source orchestration for zero-human companies. [Repo](https://github.com/paperclipai/paperclip)
-
-- **MiniCode** — A lightweight terminal coding assistant with Claude Code-like workflow and TUI architecture. [Repo](https://github.com/LiuMengxuan04/MiniCode)
-
-- **investing-algorithm-framework** — Framework for developing, backtesting, and deploying automated trading algorithms and trading bots. [Repo](https://github.com/coding-kitties/investing-algorithm-framework)
+| Project | Description | Stars |
+|---------|-------------|-------|
+| [paperclip](https://github.com/paperclipai/paperclip) | Open-source orchestration for zero-human companies. | ![stars](https://img.shields.io/github/stars/paperclipai/paperclip?style=flat-square&color=38BDF8&labelColor=1e293b) |
+| [MiniCode](https://github.com/LiuMengxuan04/MiniCode) | A lightweight terminal coding assistant with Claude Code-like workflow and TUI architecture. | ![stars](https://img.shields.io/github/stars/LiuMengxuan04/MiniCode?style=flat-square&color=38BDF8&labelColor=1e293b) |
+| [investing-algorithm-framework](https://github.com/coding-kitties/investing-algorithm-framework) | Framework for developing, backtesting, and deploying automated trading algorithms and trading bots. | ![stars](https://img.shields.io/github/stars/coding-kitties/investing-algorithm-framework?style=flat-square&color=38BDF8&labelColor=1e293b) |
 
 ---
 
