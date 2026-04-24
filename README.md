@@ -41,6 +41,7 @@ Built Tcl/Python automation tools to optimize verification workflows and reduce 
 | [oc-loop](https://github.com/GoDiao/oc-loop) | Resumable loop plugin for opencode with `/oc-loop` and `/oc-watch`, designed to make iterative agent workflows more persistent and practical. | ![stars](https://img.shields.io/github/stars/GoDiao/oc-loop?style=flat-square&color=38BDF8&labelColor=1e293b) |
 | [ai-interview-agent](https://github.com/GoDiao/ai-interview-agent) | AI-powered interview preparation agent with structured questioning, feedback loops, and technical interview simulation. | ![stars](https://img.shields.io/github/stars/GoDiao/ai-interview-agent?style=flat-square&color=38BDF8&labelColor=1e293b) |
 | [Paper-Reader](https://github.com/GoDiao/Paper-Reader) | Hierarchical multi-agent academic paper analysis system with an interactive web interface for reading and summarizing research papers. | ![stars](https://img.shields.io/github/stars/GoDiao/Paper-Reader?style=flat-square&color=38BDF8&labelColor=1e293b) |
+| [Freeway](https://github.com/GoDiao/Free-Way) | Open-source gateway aggregating free LLM APIs behind one local, OpenAI-compatible endpoint. | ![stars](https://img.shields.io/github/stars/GoDiao/Free-Way?style=flat-square&color=38BDF8&labelColor=1e293b) |
 
 ---
 
