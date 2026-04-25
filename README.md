@@ -15,6 +15,12 @@
   Building research-driven AI systems with a bias toward robust engineering, open-source contribution, and practical deployment.
 </p>
 
+<p align="center">
+  <a href="https://godiao.github.io/">
+    <img src="https://img.shields.io/badge/Website-godiao.github.io-00C7B7?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
 ---
 
 ## About Me
