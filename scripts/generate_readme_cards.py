@@ -62,6 +62,7 @@ query($login: String!, $cursor: String) {
     }
     repositoriesContributedTo(
       first: 1
+      privacy: PUBLIC
       contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
     ) { totalCount }
     repositories(
@@ -69,6 +70,7 @@ query($login: String!, $cursor: String) {
       after: $cursor
       ownerAffiliations: OWNER
       isFork: false
+      privacy: PUBLIC
       orderBy: { field: STARGAZERS, direction: DESC }
     ) {
       totalCount
@@ -106,6 +108,12 @@ def graphql(token, cursor=None):
 
 
 def fetch():
+    # The repositories query is pinned to privacy: PUBLIC on purpose. Without
+    # it the card depends on who ran it: a PAT carrying the `repo` scope folds
+    # private repositories into the star total and the language breakdown,
+    # while the Actions GITHUB_TOKEN sees only public ones, so the same script
+    # produced two different cards. Public-only is also the honest figure for
+    # a page whose whole audience can see exactly those repositories.
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     if not token:
         sys.exit("set GH_TOKEN (locally: GH_TOKEN=$(gh auth token))")
@@ -136,6 +144,9 @@ def fetch():
         "stars": sum(r["stargazerCount"] for r in repos),
         "repos": user["repositories"]["totalCount"],
         "followers": user["followers"]["totalCount"],
+        # Private contributions are counted because this profile publishes
+        # them: both a PAT and the Actions token report the same figure, and
+        # it is what GitHub's own contribution graph shows for this user.
         "commits": contrib["totalCommitContributions"]
         + contrib["restrictedContributionsCount"],
         "prs": contrib["totalPullRequestContributions"],
