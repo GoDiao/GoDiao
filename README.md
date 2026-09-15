@@ -4,10 +4,6 @@
 
 <br/>
 
-<a href="https://github.com/GoDiao?tab=followers">
-  <img src="https://img.shields.io/github/followers/GoDiao?label=followers&style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="GitHub followers" />
-</a>
-<img src="https://komarev.com/ghpvc/?username=GoDiao&style=flat-square&color=8f1017&label=profile+views" alt="Profile views" />
 <a href="https://godiao.github.io/">
   <img src="https://img.shields.io/badge/website-godiao.github.io-e51d2a?style=flat-square&logo=github&logoColor=white&labelColor=0a0a0a" alt="Personal website" />
 </a>
