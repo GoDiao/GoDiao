@@ -335,16 +335,22 @@ def langs_card(data):
         '<clipPath id="barclip"><rect x="{x}" y="{y}" width="{w}" '
         'height="10" rx="5"/></clipPath>'.format(x=bar_x, y=bar_y, w=bar_w)
     )
-    offset = 0.0
+    # Segment edges come from a cumulative integer sum rounded once, not from
+    # `offset += seg` in a loop: accumulated float error made byte-identical
+    # input render to different coordinates, which committed a "changed" card
+    # every day.
+    cumulative = 0
+    edge = 0.0
     for index, (name, size) in enumerate(ranked):
-        seg = bar_w * size / total
+        cumulative += size
+        next_edge = round(bar_w * cumulative / total, 1)
         parts.append(
-            '<rect x="{x:.2f}" y="{y}" width="{w:.2f}" height="10" '
+            '<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="10" '
             'fill="{c}" clip-path="url(#barclip)"/>'.format(
-                x=bar_x + offset, y=bar_y, w=seg, c=ramp[index]
+                x=bar_x + edge, y=bar_y, w=next_edge - edge, c=ramp[index]
             )
         )
-        offset += seg
+        edge = next_edge
 
     row_y = 92
     for index, (name, size) in enumerate(ranked):
