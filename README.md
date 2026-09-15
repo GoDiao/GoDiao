@@ -1,113 +1,198 @@
-<h1 align="center">DIAO Shengjia</h1>
-<p align="center">
-  <b>AI/ML Researcher @ NTU Singapore</b><br/>
-  Computer Vision · LLM Systems · Agentic AI
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Focus-Computer%20Vision-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-LLM%20Systems-6a5acd?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-Agentic%20AI-0a7ea4?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Location-Singapore-2ea44f?style=for-the-badge" />
-</p>
+<img width="100%" src="./profile/banner.svg" alt="DIAO Shengjia — AI Engineer at Garena (Sea), AI/ML Researcher" />
 
-<p align="center">
-  Building research-driven AI systems with a bias toward robust engineering, open-source contribution, and practical deployment.
-</p>
+<br/>
 
-<p align="center">
-  <a href="https://godiao.github.io/">
-    <img src="https://img.shields.io/badge/Website-godiao.github.io-00C7B7?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
+<a href="https://github.com/GoDiao?tab=followers">
+  <img src="https://img.shields.io/github/followers/GoDiao?label=followers&style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="GitHub followers" />
+</a>
+<img src="https://komarev.com/ghpvc/?username=GoDiao&style=flat-square&color=8f1017&label=profile+views" alt="Profile views" />
+<a href="https://godiao.github.io/">
+  <img src="https://img.shields.io/badge/website-godiao.github.io-e51d2a?style=flat-square&logo=github&logoColor=white&labelColor=0a0a0a" alt="Personal website" />
+</a>
+<a href="mailto:diaoshengjia@gmail.com">
+  <img src="https://img.shields.io/badge/say_hi-email-ff3b45?style=flat-square&logo=gmail&logoColor=white&labelColor=0a0a0a" alt="Email" />
+</a>
 
----
+<br/><br/>
 
-## About Me
+<code>Agentic AI</code>
+<code>AI Infrastructure</code>
+<code>Computer Vision</code>
+<code>Embodied Intelligence</code>
+<code>Singapore</code>
 
-I am an AI/ML researcher pursuing an M.Sc. in Electrical & Electronic Engineering at NTU Singapore, where I also earned my B.Eng. in the same field.
-My interests sit at the intersection of **object detection, multimodal intelligence, LLM systems, and agentic workflows**, with a strong preference for building systems that are both technically interesting and operationally useful.
+</div>
 
-## Experience
+## About
 
-### Huawei Singapore Research Center
-**Algorithm Research Engineer Intern** · Jul 2025 – Dec 2025  
-Worked on computational photography, LLM inference systems, embodied AI, and agentic driving systems. Contributed across RGB-to-RAW reconstruction, KV cache optimization on Ascend 910B, VLA/RAW-to-action training, and end-to-end agent stack migration for autonomous driving workloads. **Outstanding R&D Contribution Award (team)**
+AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. M.Sc. in Electrical & Electronic Engineering at **NTU Singapore** (Highest Distinction), where I also earned my B.Eng. Previously an Algorithm Research Engineer at **Huawei Singapore Research Center**.
 
-### Infineon Technologies
-**Chip Verification Engineer Intern** · Dec 2022 – Jul 2023  
-Built Tcl/Python automation tools to optimize verification workflows and reduce qualification runtime by about 33%. Worked closely with chip design engineers on qualification experiments and faster issue identification during RTL bring-up.
+I work on systems that have to survive contact with production, not just a benchmark. Most of what is below started as a tool I needed.
 
----
+| Area | Focus |
+|---|---|
+| **Computer Vision** | RAW reconstruction · inverse ISP |
+| **Agentic AI** | multi-agent architectures · tool loops |
+| **Embodied Intelligence** | VLA models · SpatialVLA |
+| **AI Infrastructure** | agent serving · LLM systems · KV cache |
 
 ## Featured Builds
 
-| Project | Description | Stars |
-|---------|-------------|-------|
-| [dreamcoder](https://github.com/GoDiao/dreamcoder) | Open-source Claude Desktop workspace — full-featured coding environment with TUI, file management, and terminal integration. | ![stars](https://img.shields.io/github/stars/GoDiao/dreamcoder?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [Freeway](https://github.com/GoDiao/Free-Way) | Open-source gateway aggregating 14+ free LLM APIs behind one local, OpenAI- and Anthropic-compatible endpoint. | ![stars](https://img.shields.io/github/stars/GoDiao/Free-Way?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [ai-interview-agent](https://github.com/GoDiao/ai-interview-agent) | AI-powered interview preparation agent with structured questioning and feedback loops. | ![stars](https://img.shields.io/github/stars/GoDiao/ai-interview-agent?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [Paper-Reader](https://github.com/GoDiao/Paper-Reader) | Hierarchical multi-agent academic paper analysis system with interactive web interface. | ![stars](https://img.shields.io/github/stars/GoDiao/Paper-Reader?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [cswap](https://github.com/GoDiao/cswap) | Cross-platform CLI for switching Claude Code providers with isolated sessions. | ![stars](https://img.shields.io/github/stars/GoDiao/cswap?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [codex-sessions-mgr](https://github.com/GoDiao/codex-sessions-mgr) | Save and restore Codex Desktop/CLI session context across providers and machines. | ![stars](https://img.shields.io/github/stars/GoDiao/codex-sessions-mgr?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [oc-loop](https://github.com/GoDiao/oc-loop) | Resumable loop plugin for opencode with `/oc-loop` and `/oc-watch`. | ![stars](https://img.shields.io/github/stars/GoDiao/oc-loop?style=flat-square&color=38bdf8&labelColor=1e293b) |
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/GoDiao/dreamcoder">dreamcoder</a></h3>
+      <p>An open-source desktop GUI for Claude Code — a native programming workbench with session management, an integrated terminal, and multi-provider support.</p>
+      <a href="https://github.com/GoDiao/dreamcoder"><img src="https://img.shields.io/github/stars/GoDiao/dreamcoder?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="dreamcoder stars" /></a>
+      <img src="https://img.shields.io/badge/Tauri-0a0a0a?style=flat-square&logo=tauri" alt="Tauri" />
+      <img src="https://img.shields.io/badge/React-0a0a0a?style=flat-square&logo=react" alt="React" />
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/GoDiao/ai-interview-agent">ai-interview-agent</a></h3>
+      <p>An interview-preparation agent that runs structured questioning and feedback loops instead of one-shot question generation.</p>
+      <a href="https://github.com/GoDiao/ai-interview-agent"><img src="https://img.shields.io/github/stars/GoDiao/ai-interview-agent?style=flat-square&logo=github&color=ff3b45&labelColor=0a0a0a" alt="ai-interview-agent stars" /></a>
+      <img src="https://img.shields.io/badge/Python-0a0a0a?style=flat-square&logo=python" alt="Python" />
+      <img src="https://img.shields.io/badge/Agent_Loop-0a0a0a?style=flat-square" alt="Agent loop" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/GoDiao/Free-Way">Freeway</a></h3>
+      <p>Run Claude Code, Codex, OpenCode and Cline for free — one local gateway to 14+ free LLM providers, compatible with both the OpenAI and Anthropic protocols.</p>
+      <a href="https://github.com/GoDiao/Free-Way"><img src="https://img.shields.io/github/stars/GoDiao/Free-Way?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="Freeway stars" /></a>
+      <img src="https://img.shields.io/badge/TypeScript-0a0a0a?style=flat-square&logo=typescript" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/LLM_Gateway-0a0a0a?style=flat-square" alt="LLM gateway" />
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/GoDiao/Open-Agent-in-Browser">Iris</a></h3>
+      <p>A Chrome extension that gives the browser a persistent AI assistant — memory, DOM automation, network control, and 60+ tools.</p>
+      <a href="https://github.com/GoDiao/Open-Agent-in-Browser"><img src="https://img.shields.io/github/stars/GoDiao/Open-Agent-in-Browser?style=flat-square&logo=github&color=ff3b45&labelColor=0a0a0a" alt="Iris stars" /></a>
+      <img src="https://img.shields.io/badge/TypeScript-0a0a0a?style=flat-square&logo=typescript" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Chrome_Extension-0a0a0a?style=flat-square&logo=googlechrome" alt="Chrome extension" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/GoDiao/openkb">openkb</a></h3>
+      <p>A centralized agent kanban for multi-agent workflows — agents sync over CLI while humans track spec, plan and roadmap in a web hub.</p>
+      <a href="https://github.com/GoDiao/openkb"><img src="https://img.shields.io/github/stars/GoDiao/openkb?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="openkb stars" /></a>
+      <img src="https://img.shields.io/badge/Python-0a0a0a?style=flat-square&logo=python" alt="Python" />
+      <img src="https://img.shields.io/badge/Multi--Agent-0a0a0a?style=flat-square" alt="Multi-agent" />
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/GoDiao/Paper-Reader">Paper-Reader</a></h3>
+      <p>A hierarchical multi-agent system for reading academic papers, with an interactive web interface over the analysis pipeline.</p>
+      <a href="https://github.com/GoDiao/Paper-Reader"><img src="https://img.shields.io/github/stars/GoDiao/Paper-Reader?style=flat-square&logo=github&color=ff3b45&labelColor=0a0a0a" alt="Paper-Reader stars" /></a>
+      <img src="https://img.shields.io/badge/Python-0a0a0a?style=flat-square&logo=python" alt="Python" />
+      <img src="https://img.shields.io/badge/LLM-0a0a0a?style=flat-square" alt="LLM" />
+    </td>
+  </tr>
+</table>
 
----
+**Also maintained** — [oc-loop](https://github.com/GoDiao/oc-loop), a resumable loop plugin for opencode · [cswap](https://github.com/GoDiao/cswap), a CLI for switching Claude Code providers with isolated sessions · [codex-sessions-mgr](https://github.com/GoDiao/codex-sessions-mgr), session context save and restore for Codex.
 
-## Open Source Highlights
+## Open Source Contributions
 
-| Project | Description | Stars |
-|---------|-------------|-------|
-| [paperclip](https://github.com/paperclipai/paperclip) | Open-source orchestration for zero-human companies. | ![stars](https://img.shields.io/github/stars/paperclipai/paperclip?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [MiniCode](https://github.com/LiuMengxuan04/MiniCode) | Lightweight terminal coding assistant with Claude Code-like workflow and TUI. | ![stars](https://img.shields.io/github/stars/LiuMengxuan04/MiniCode?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [optillm](https://github.com/algorithmicsuperintelligence/optillm) | Optimizing inference proxy for LLMs with pluggable approaches. | ![stars](https://img.shields.io/github/stars/algorithmicsuperintelligence/optillm?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [open-codesign](https://github.com/OpenCoworkAI/open-codesign) | Open-source AI coding desktop app. | ![stars](https://img.shields.io/github/stars/OpenCoworkAI/open-codesign?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [opensre](https://github.com/Tracer-Cloud/opensre) | Open-source SRE platform for cloud infrastructure monitoring. | ![stars](https://img.shields.io/github/stars/Tracer-Cloud/opensre?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [claude-context](https://github.com/zilliztech/claude-context) | Context management for Claude with MCP integration. | ![stars](https://img.shields.io/github/stars/zilliztech/claude-context?style=flat-square&color=38bdf8&labelColor=1e293b) |
-| [investing-algorithm-framework](https://github.com/coding-kitties/investing-algorithm-framework) | Framework for backtesting and deploying automated trading algorithms. | ![stars](https://img.shields.io/github/stars/coding-kitties/investing-algorithm-framework?style=flat-square&color=38bdf8&labelColor=1e293b) |
+- [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) — terminal-native AI coding assistant with a Claude Code-style workflow and a lightweight TUI. **Core contributor**, leading session persistence and the memory layer.
+- [**paperclip**](https://github.com/paperclipai/paperclip) — agent orchestration for autonomous, zero-human companies: multi-agent negotiation, task dispatch, execution monitoring.
+- [**claude-context**](https://github.com/zilliztech/claude-context) — code search MCP that makes an entire codebase the context for any coding agent.
+- [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) — open-source Claude Design alternative; prompt to prototype, slides or PDF. BYOK, local-first.
+- [**opensre**](https://github.com/Tracer-Cloud/opensre) — framework for AI SRE agents, 60+ integrations for incident investigation and automated remediation.
+- [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) — optimizing inference proxy for LLMs: MoA, CoT, MCTS, automatic context compression.
+- [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) — backtest engine, indicator computation and deployment for trading strategies.
 
----
+## Experience
 
-## Research & Engineering Focus
+**AI Engineer** · Garena (Sea) · Aug 2026 — Present<br/>
+Agentic AI and AI infrastructure.
 
-<p>
-  <img src="https://img.shields.io/badge/Multimodal%20AI-111827?style=flat-square" />
-  <img src="https://img.shields.io/badge/Computer%20Vision-1f6feb?style=flat-square" />
-  <img src="https://img.shields.io/badge/LLM%20Systems-7c3aed?style=flat-square" />
-  <img src="https://img.shields.io/badge/Inference%20Infrastructure-0f766e?style=flat-square" />
-  <img src="https://img.shields.io/badge/Agentic%20AI-b45309?style=flat-square" />
-  <img src="https://img.shields.io/badge/Applied%20ML%20Engineering-374151?style=flat-square" />
-</p>
+**Algorithm Research Engineer Intern** · Huawei Singapore Research Center · Jul 2025 — Dec 2025
 
----
+- RGB-to-RAW reconstruction — ReRAW model, PSNR 52.81 → 56.98, SSIM 0.91 → 0.95.
+- LMCache on Ascend 910B — CacheBlend integration, KV hit rate above the vLLM prefix cache.
+- VLA / RAW-to-action — SpatialVLA on the Bridge dataset, success rate 34.5% → 49.5%.
+- RawAdaptationModule — learnable channel projection bridging 4-channel RAW to an RGB encoder.
+- AgentDriver — full-stack Ascend migration, Qwen2.5-32B fine-tuned with MindSpeed-LLM.
+- *Outstanding R&D Contribution Award (team).*
+
+**Implementation Engineer Intern** · Kingdee International Software · May 2024 — Jul 2024<br/>
+ERP implementation for Chongqing Xinhua Bookstore Group; Python data-processing automation, efficiency up over 70%.
+
+**Chip Verification Engineer Intern** · Infineon Technologies · Dec 2022 — Jul 2023<br/>
+Tcl and Python automation for verification workflows, qualification runtime down roughly 33%; RTL bring-up qualification experiments with chip design engineers.
+
+## Education
+
+**M.Sc. Electrical & Electronic Engineering** · Nanyang Technological University · Aug 2024 — 2026<br/>
+CGPA 4.50/5.00, Highest Distinction · EEE Global Merit Award (21 / 2114) · Genetic Algorithms & ML, NLP
+
+**B.Eng. Electrical & Electronic Engineering** · Nanyang Technological University · Aug 2020 — May 2024<br/>
+SM2 Scholarship
+
+## Competitions
+
+- **WSDM Cup — Multilingual Chatbot Arena** · rank 154 / 950 — Gemma2-9b-it fine-tuned with LoRA and int4 quantization.
+- **LLM 20 Questions** · 83% accuracy — GRPO training from scratch, cooperative multi-agent architecture.
 
 ## Toolbox
 
-### Languages & Frameworks
-<p>
-  <img src="https://skillicons.dev/icons?i=python,ts,rust,cpp,react,fastapi,pytorch,nodejs,docker,git,postgres,linux" />
-</p>
+<div align="center">
 
-### Working With
-<p>
-  <img src="https://img.shields.io/badge/vLLM-Serving-blueviolet?style=flat-square" />
-  <img src="https://img.shields.io/badge/Ascend%20910B-Platform-darkgreen?style=flat-square" />
-  <img src="https://img.shields.io/badge/OpenCode-Agent%20Workflow-black?style=flat-square" />
-  <img src="https://img.shields.io/badge/PostgreSQL-Systems%20Infra-336791?style=flat-square" />
-</p>
+<img src="https://skillicons.dev/icons?i=python,ts,rust,cpp,pytorch,react,tauri,fastapi,nodejs,docker,kubernetes,postgres,linux,git&perline=7" alt="Technology toolbox" />
 
----
+<br/><br/>
+
+<img src="https://img.shields.io/badge/vLLM-serving-e51d2a?style=flat-square&labelColor=0a0a0a" alt="vLLM" />
+<img src="https://img.shields.io/badge/LMCache-KV_cache-ff3b45?style=flat-square&labelColor=0a0a0a" alt="LMCache" />
+<img src="https://img.shields.io/badge/Ascend_910B-platform-8f1017?style=flat-square&labelColor=0a0a0a" alt="Ascend 910B" />
+<img src="https://img.shields.io/badge/MindSpeed--LLM-training-e51d2a?style=flat-square&labelColor=0a0a0a" alt="MindSpeed-LLM" />
+<img src="https://img.shields.io/badge/MCP-agent_tooling-ff3b45?style=flat-square&labelColor=0a0a0a" alt="MCP" />
+
+</div>
 
 ## GitHub Analytics
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=GoDiao&show_icons=true&hide_border=true&count_private=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GoDiao&layout=compact&hide_border=true" />
-</p>
+<div align="center">
+
+<a href="https://github.com/GoDiao">
+  <img width="96%" src="./profile/activity.svg" alt="GitHub contribution activity over the last 12 months" />
+</a>
+
+<br/>
+
+<a href="https://github.com/GoDiao">
+  <img height="190" src="./profile/stats.svg" alt="GitHub stats" />
+</a>
+<a href="https://github.com/GoDiao?tab=repositories">
+  <img height="190" src="./profile/top-langs.svg" alt="Most used languages" />
+</a>
+
+<br/>
+
+<sub>These cards are generated by <a href="./scripts/generate_readme_cards.py">a script in this repo</a> and refreshed daily by <a href="./.github/workflows/update-readme-cards.yml">GitHub Actions</a> — no third-party rendering service.</sub>
+
+</div>
 
 ---
 
-## Reach Out
+<div align="center">
 
-- Email: [diaoshengjia@gmail.com](mailto:diaoshengjia@gmail.com)
-- LinkedIn: [linkedin.com/in/shengjia-diao-800964222/](https://www.linkedin.com/in/shengjia-diao-800964222/)
+### Stay Focused.
+
+<a href="https://godiao.github.io/">
+  <img src="https://img.shields.io/badge/Website-godiao.github.io-e51d2a?style=for-the-badge&logo=github&logoColor=white" alt="Website" />
+</a>
+<a href="https://www.linkedin.com/in/shengjia-diao-800964222/">
+  <img src="https://img.shields.io/badge/LinkedIn-connect-8f1017?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<a href="mailto:diaoshengjia@gmail.com">
+  <img src="https://img.shields.io/badge/Email-say_hi-ff3b45?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+
+<br/><br/>
+
+<sub>Based in Singapore · open to research collaboration and open-source work</sub>
+
+</div>

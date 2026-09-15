@@ -1,0 +1,48 @@
+name: Update README cards
+
+on:
+  schedule:
+    # 03:20 UTC daily, off the hour to avoid the scheduler's busiest minute.
+    - cron: "20 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/generate_readme_cards.py
+      - .github/workflows/update-readme-cards.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-cards
+  cancel-in-progress: true
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate cards
+        env:
+          # A classic PAT with read:user also counts private contributions;
+          # without one the built-in token still covers all public activity.
+          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_readme_cards.py
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain profile)" ]; then
+            echo "cards unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile
+          git commit -m "chore: refresh README cards"
+          git push
