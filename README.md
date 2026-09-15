@@ -38,12 +38,12 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Experience
 
-| Role | Company | Period |
-|---|---|---|
-| AI Engineer | Garena (Sea) | Aug 2026 — Present |
-| Algorithm Research Engineer Intern | Huawei Singapore Research Center | Jul 2025 — Dec 2025 |
-| Implementation Engineer Intern | Kingdee International Software | May 2024 — Jul 2024 |
-| Chip Verification Engineer Intern | Infineon Technologies | Dec 2022 — Jul 2023 |
+| | Role | Company | Period |
+|---|---|---|---|
+| <img src="./profile/logos/garena.svg" width="116" alt="Garena" /> | AI Engineer | Garena (Sea) | Aug 2026 — Present |
+| <img src="./profile/logos/huawei.svg" width="116" alt="Huawei" /> | Algorithm Research Engineer Intern | Huawei Singapore Research Center | Jul 2025 — Dec 2025 |
+| <img src="./profile/logos/kingdee.svg" width="116" alt="Kingdee" /> | Implementation Engineer Intern | Kingdee International Software | May 2024 — Jul 2024 |
+| <img src="./profile/logos/infineon.svg" width="116" alt="Infineon" /> | Chip Verification Engineer Intern | Infineon Technologies | Dec 2022 — Jul 2023 |
 
 ## Featured Builds
 
