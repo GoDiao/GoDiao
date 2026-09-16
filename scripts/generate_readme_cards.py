@@ -264,6 +264,67 @@ def banner():
 
 
 # --------------------------------------------------------------------------
+# badge-stars.svg
+# --------------------------------------------------------------------------
+# The header badge row is shields.io, and shields has no endpoint for a user's
+# star total, so this one is drawn here to match its neighbours exactly rather
+# than approximately. Geometry is copied from a real flat-square badge:
+# height 20, square corners, 5px padding each side of a segment, a 14px logo
+# at x=5 with a 3px gap, and Verdana 11 text pinned with textLength so the
+# result does not drift with whatever font the viewer actually has. Verdana
+# digits are uniform at 7.0px; "total stars" measures 55.0px.
+LABEL = "total stars"
+LABEL_W = 55.0
+DIGIT_W = 7.0
+
+# Simple Icons' star glyph, on their 24x24 grid, scaled to the 14px logo box.
+STAR = (
+    "M12 .587l3.668 7.431 8.332 1.151-6.064 5.828 1.48 8.279L12 18.897"
+    "l-7.416 4.379 1.48-8.279L0 9.169l8.332-1.151z"
+)
+
+
+def stars_badge(data):
+    value = str(data["stars"])
+    left = 5 + 14 + 3 + LABEL_W + 5
+    value_w = DIGIT_W * len(value)
+    right = 5 + value_w + 5
+    width = left + right
+
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="{w:g}" height="20" '
+        'role="img" aria-label="total stars: {v}">'
+        "<title>total stars: {v}</title>"
+        '<g shape-rendering="crispEdges">'
+        '<rect width="{l:g}" height="20" fill="#0a0a0a"/>'
+        '<rect x="{l:g}" width="{r:g}" height="20" fill="{a}"/>'
+        "</g>"
+        '<g transform="translate(5,3) scale(0.58333)" fill="#ffffff">'
+        '<path d="{star}"/></g>'
+        '<g fill="#fff" text-anchor="middle" '
+        'font-family="Verdana,Geneva,DejaVu Sans,sans-serif" '
+        'text-rendering="geometricPrecision" font-size="110">'
+        '<text x="{lx:g}" y="140" textLength="{lw:g}" '
+        'transform="scale(.1)">{label}</text>'
+        '<text x="{vx:g}" y="140" textLength="{vw:g}" '
+        'transform="scale(.1)">{v}</text>'
+        "</g></svg>"
+    ).format(
+        w=width,
+        l=left,
+        r=right,
+        a=ACCENT,
+        star=STAR,
+        v=value,
+        label=escape(LABEL),
+        lx=(5 + 14 + 3 + LABEL_W / 2.0) * 10,
+        lw=LABEL_W * 10,
+        vx=(left + right / 2.0) * 10,
+        vw=value_w * 10,
+    )
+
+
+# --------------------------------------------------------------------------
 # stats.svg
 # --------------------------------------------------------------------------
 def stats_card(data):
@@ -492,6 +553,7 @@ def main():
         sys.exit("GitHub API {}: {}".format(err.code, err.read().decode()[:400]))
 
     write("banner.svg", banner())
+    write("badge-stars.svg", stars_badge(data))
     write("stats.svg", stats_card(data))
     write("top-langs.svg", langs_card(data))
     write("activity.svg", activity_card(data))
