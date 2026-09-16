@@ -4,6 +4,9 @@
 
 <br/>
 
+<a href="https://github.com/GoDiao?tab=repositories">
+  <img src="./profile/badge-stars.svg" alt="Total stars across public repositories" />
+</a>
 <a href="https://godiao.github.io/">
   <img src="https://img.shields.io/badge/website-godiao.github.io-e51d2a?style=flat-square&logo=github&logoColor=white&labelColor=0a0a0a" alt="Personal website" />
 </a>
@@ -48,14 +51,18 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
     <td width="50%" valign="top">
       <h3><a href="https://github.com/GoDiao/dreamcoder">dreamcoder</a></h3>
       <p>Desktop GUI for Claude Code — session management, integrated terminal, multi-provider.</p>
-      <a href="https://github.com/GoDiao/dreamcoder"><img src="https://img.shields.io/github/stars/GoDiao/dreamcoder?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="dreamcoder stars" /></a>
+      <a href="https://github.com/GoDiao/dreamcoder/stargazers"><img src="https://img.shields.io/github/stars/GoDiao/dreamcoder?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="dreamcoder stars" /></a>
+      <a href="https://github.com/GoDiao/dreamcoder/releases"><img src="https://img.shields.io/github/downloads/GoDiao/dreamcoder/total?style=flat-square&logo=github&label=downloads&color=ff3b45&labelColor=0a0a0a" alt="dreamcoder downloads" /></a>
+      <a href="https://github.com/GoDiao/dreamcoder/forks"><img src="https://img.shields.io/github/forks/GoDiao/dreamcoder?style=flat-square&logo=github&color=8f1017&labelColor=0a0a0a" alt="dreamcoder forks" /></a>
+      <a href="https://github.com/GoDiao/dreamcoder/releases/latest"><img src="https://img.shields.io/github/v/release/GoDiao/dreamcoder?style=flat-square&color=8f1017&labelColor=0a0a0a" alt="dreamcoder latest release" /></a>
       <img src="https://img.shields.io/badge/Tauri-0a0a0a?style=flat-square&logo=tauri" alt="Tauri" />
       <img src="https://img.shields.io/badge/React-0a0a0a?style=flat-square&logo=react" alt="React" />
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/GoDiao/Free-Way">Freeway</a></h3>
       <p>One local gateway to 14+ free LLM providers. OpenAI- and Anthropic-compatible.</p>
-      <a href="https://github.com/GoDiao/Free-Way"><img src="https://img.shields.io/github/stars/GoDiao/Free-Way?style=flat-square&logo=github&color=ff3b45&labelColor=0a0a0a" alt="Freeway stars" /></a>
+      <a href="https://github.com/GoDiao/Free-Way/stargazers"><img src="https://img.shields.io/github/stars/GoDiao/Free-Way?style=flat-square&logo=github&color=ff3b45&labelColor=0a0a0a" alt="Freeway stars" /></a>
+      <a href="https://github.com/GoDiao/Free-Way/graphs/contributors"><img src="https://img.shields.io/github/contributors/GoDiao/Free-Way?style=flat-square&logo=github&label=contributors&color=e51d2a&labelColor=0a0a0a" alt="Freeway contributors" /></a>
       <img src="https://img.shields.io/badge/TypeScript-0a0a0a?style=flat-square&logo=typescript" alt="TypeScript" />
       <img src="https://img.shields.io/badge/Gateway-0a0a0a?style=flat-square" alt="Gateway" />
     </td>
@@ -64,7 +71,6 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
     <td width="50%" valign="top">
       <h3><a href="https://github.com/GoDiao/Open-Agent-in-Browser">Iris</a></h3>
       <p>Chrome extension with a persistent AI assistant — memory, DOM automation, 60+ tools.</p>
-      <a href="https://github.com/GoDiao/Open-Agent-in-Browser"><img src="https://img.shields.io/github/stars/GoDiao/Open-Agent-in-Browser?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="Iris stars" /></a>
       <img src="https://img.shields.io/badge/TypeScript-0a0a0a?style=flat-square&logo=typescript" alt="TypeScript" />
       <img src="https://img.shields.io/badge/Extension-0a0a0a?style=flat-square&logo=googlechrome" alt="Chrome extension" />
     </td>
@@ -108,7 +114,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,ts,rust,cpp,pytorch,react,tauri,fastapi,nodejs,docker,kubernetes,postgres,linux,git&perline=7" alt="Technology toolbox" />
+<img width="436" src="./profile/toolbox.svg" alt="Toolbox: Python, TypeScript, Rust, C++, PyTorch, React, Tauri, FastAPI, Node.js, Docker, Kubernetes, PostgreSQL, Linux, Git" />
 
 <br/><br/>
 
