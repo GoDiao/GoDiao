@@ -2,7 +2,10 @@
 """Generate the SVG cards embedded in the profile README.
 
 Everything under profile/ is produced by this script, so the README never
-hot-links a shared rendering service that can rate-limit or go down.
+hot-links a shared rendering service that can rate-limit or go down. The star
+counts in the README's Open Source Contributions section are rewritten here
+too, for the same reason: a number in the text cannot be rate-limited, and
+this keeps it from going stale.
 
 Usage:
     GH_TOKEN=$(gh auth token) python3 scripts/generate_readme_cards.py
@@ -12,6 +15,7 @@ Only the standard library is used, so there is nothing to install.
 
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -25,7 +29,9 @@ TAGLINE = "AI Engineer @ Garena (Sea) · AI/ML Researcher"
 CHIPS = ["Agentic AI", "AI Infrastructure", "Computer Vision", "Embodied AI"]
 
 API = "https://api.github.com/graphql"
-OUT_DIR = Path(__file__).resolve().parent.parent / "profile"
+ROOT = Path(__file__).resolve().parent.parent
+OUT_DIR = ROOT / "profile"
+README = ROOT / "README.md"
 
 # One palette for every card and every badge in the README: Garena red on black.
 BG = "#050505"        # near-black card ground
@@ -87,10 +93,9 @@ query($login: String!, $cursor: String) {
 """
 
 
-def graphql(token, cursor=None):
-    payload = json.dumps(
-        {"query": QUERY, "variables": {"login": LOGIN, "cursor": cursor}}
-    ).encode()
+def post(token, query, variables=None):
+    """Raw GraphQL response, errors included; the caller decides how strict."""
+    payload = json.dumps({"query": query, "variables": variables or {}}).encode()
     req = urllib.request.Request(
         API,
         data=payload,
@@ -101,10 +106,21 @@ def graphql(token, cursor=None):
         },
     )
     with urllib.request.urlopen(req, timeout=30) as resp:
-        body = json.loads(resp.read().decode())
+        return json.loads(resp.read().decode())
+
+
+def graphql(token, cursor=None):
+    body = post(token, QUERY, {"login": LOGIN, "cursor": cursor})
     if "errors" in body:
         raise RuntimeError(json.dumps(body["errors"], indent=2))
     return body["data"]["user"]
+
+
+def auth_token():
+    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if not token:
+        sys.exit("set GH_TOKEN (locally: GH_TOKEN=$(gh auth token))")
+    return token
 
 
 def fetch():
@@ -114,10 +130,7 @@ def fetch():
     # while the Actions GITHUB_TOKEN sees only public ones, so the same script
     # produced two different cards. Public-only is also the honest figure for
     # a page whose whole audience can see exactly those repositories.
-    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    if not token:
-        sys.exit("set GH_TOKEN (locally: GH_TOKEN=$(gh auth token))")
-
+    token = auth_token()
     user = graphql(token)
     repos = list(user["repositories"]["nodes"])
     page = user["repositories"]["pageInfo"]
@@ -169,6 +182,88 @@ def write(name, body):
     path = OUT_DIR / name
     path.write_text(body, encoding="utf-8")
     print("wrote", path.relative_to(OUT_DIR.parent))
+
+
+# --------------------------------------------------------------------------
+# Open Source Contributions star counts
+# --------------------------------------------------------------------------
+HEADING = "## Open Source Contributions"
+
+# One entry of that section: the repository link, then the star count this
+# function keeps current. Anchoring on the backticked count is what stops the
+# pattern from touching any other link in the README, including the pull
+# request link that sits on the same line as one of the entries.
+ENTRY = re.compile(
+    r"\(https://github\.com/([\w.-]+)/([\w.-]+)\) `[\d.]+k?\u2605`"
+)
+
+
+def compact(n):
+    """Stars the way the section writes them: 940, 1.4k, 12.6k, 73.3k.
+
+    Not human(), which keeps counts under 10k exact. A list of ten
+    repositories reads better with every line in the same k-form.
+    """
+    if n < 1000:
+        return str(n)
+    return "{:.1f}k".format(n / 1000).replace(".0k", "k")
+
+
+def repo_stars(token, repos):
+    """Current stargazer counts for every repository named in the section.
+
+    One request with an alias per repository. A repository that was renamed,
+    deleted or made private answers null, and GraphQL reports that alongside
+    the data for the others; those are skipped so one dead link cannot fail
+    the daily run. Their count simply stays as last written.
+    """
+    fields = " ".join(
+        'r{i}: repository(owner: "{o}", name: "{n}") {{ stargazerCount }}'.format(
+            i=index, o=owner, n=name
+        )
+        for index, (owner, name) in enumerate(repos)
+    )
+    data = post(token, "query {" + fields + "}").get("data") or {}
+    counts = {}
+    for index, (owner, name) in enumerate(repos):
+        node = data.get("r{}".format(index))
+        if node:
+            counts["{}/{}".format(owner, name)] = node["stargazerCount"]
+    return counts
+
+
+def refresh_readme_stars(token):
+    """Rewrite the star counts in the Open Source Contributions section."""
+    text = README.read_text(encoding="utf-8")
+    start = text.find(HEADING)
+    if start < 0:
+        print("skipped README stars:", HEADING, "is gone")
+        return
+    end = text.find("\n## ", start + len(HEADING))
+    section = text[start:end if end > 0 else len(text)]
+
+    repos = [(m.group(1), m.group(2)) for m in ENTRY.finditer(section)]
+    if not repos:
+        print("skipped README stars: no entries matched")
+        return
+    counts = repo_stars(token, repos)
+
+    def replace(match):
+        owner, name = match.group(1), match.group(2)
+        stars = counts.get("{}/{}".format(owner, name))
+        if stars is None:
+            return match.group(0)
+        return "(https://github.com/{}/{}) `{}\u2605`".format(
+            owner, name, compact(stars)
+        )
+
+    updated = ENTRY.sub(replace, section)
+    if updated == section:
+        print("README stars unchanged")
+        return
+    README.write_text(text[:start] + updated + text[start + len(section):],
+                      encoding="utf-8")
+    print("wrote README.md ({} entries)".format(len(repos)))
 
 
 def frame(width, height, title=None):
@@ -557,6 +652,14 @@ def main():
     write("stats.svg", stats_card(data))
     write("top-langs.svg", langs_card(data))
     write("activity.svg", activity_card(data))
+
+    # The cards are on disk by now. A hiccup on this one extra query should
+    # not cost the day's refresh, so it never takes the run down with it.
+    try:
+        refresh_readme_stars(auth_token())
+    # OSError covers urllib's URLError and HTTPError as well as the write.
+    except (OSError, RuntimeError, KeyError) as err:
+        print("README stars skipped:", err)
 
 
 if __name__ == "__main__":

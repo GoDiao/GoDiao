@@ -37,12 +37,14 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if [ -z "$(git status --porcelain profile)" ]; then
-            echo "cards unchanged"
+          # README.md is in here because the script also rewrites the star
+          # counts in Open Source Contributions.
+          if [ -z "$(git status --porcelain profile README.md)" ]; then
+            echo "nothing changed"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile
-          git commit -m "chore: refresh README cards"
+          git add profile README.md
+          git commit -m "chore: refresh README cards and star counts"
           git push
