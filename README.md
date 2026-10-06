@@ -115,7 +115,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 - [**semantic-router**](https://github.com/vllm-project/semantic-router) `6k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
 - [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
-- [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `1.8k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
+- [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `1.9k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.4k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
 
 ## Toolbox
