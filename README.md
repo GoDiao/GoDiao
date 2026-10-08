@@ -108,11 +108,11 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 **Merged upstream fixes**
 
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `73.4k★` — pre-indexed code knowledge graph for coding agents, 100% local. Co-authored the Go receiver and package resolution fix ([#2361](https://github.com/colbymchenry/codegraph/pull/2361)), credited in the changelog.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `73.5k★` — pre-indexed code knowledge graph for coding agents, 100% local. Co-authored the Go receiver and package resolution fix ([#2361](https://github.com/colbymchenry/codegraph/pull/2361)), credited in the changelog.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.6k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `11.6k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8k★` — open-source Claude Design alternative. BYOK, local-first.
-- [**semantic-router**](https://github.com/vllm-project/semantic-router) `6k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
+- [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.1k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
 - [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `1.9k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
