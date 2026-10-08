@@ -50,13 +50,32 @@ PER_ROW = 7
 # Tile geometry, in SVG user units. ICON is the drawn size of the 24x24 glyph.
 TILE, GAP, RADIUS, ICON = 52, 12, 10, 26
 
-PANEL = "#151515"
-BORDER = "#242424"
+# The tiles carry no colour of their own. A neutral at low alpha lifts them
+# off whichever canvas GitHub is painting -- #f0f0f0 over the light one,
+# #1b1e24 over the dark -- so one file serves both themes. This mirrors the
+# palette in generate_readme_cards.py; keep the two in step.
+NEUTRAL = "#808080"
+PANEL_OP = "0.10"
+BORDER_OP = "0.30"
 
-# A few brand colours are near-black and vanish on the panel; override those.
-# The value is the brand's own light-background variant where one exists.
+# Brand colours that fall off one canvas or the other, replaced by a tone of
+# the same brand that holds on both. The bar is roughly 3:1 against #ffffff
+# and against #0d1117: an icon is not text, but below about 2:1 the glyph
+# stops reading as a shape.
+#
+#   rust       #000000 is the brand mark and disappeared on dark, so the row
+#              already overrode it to #f5f5f5 -- which disappears on light.
+#              #CE422B is Rust's own orange: 4.73:1 and 4.00:1.
+#   linux      #FCC624 is 1.59:1 on white. Darkened to 3.25:1, still Tux.
+#   react      #61DAFB is 1.62:1 on white. #087EA4 is React's own darker
+#              brand blue, 4.64:1 and 4.08:1.
+#   tauri      #24C8D8 is 2.03:1 on white. Darkened to 3.04:1.
+#   nodedotjs  unchanged; it was already the brand's light-canvas green.
 OVERRIDES = {
-    "rust": "#f5f5f5",
+    "rust": "#CE422B",
+    "linux": "#B8860B",
+    "react": "#087EA4",
+    "tauri": "#1AA3B0",
     "nodedotjs": "#5fa04e",
 }
 
@@ -105,8 +124,10 @@ def main():
         parts.append(
             '<g><title>{t}</title>'
             '<rect x="{x}" y="{y}" width="{s}" height="{s}" rx="{r}" '
-            'fill="{p}" stroke="{b}" stroke-width="1"/>'.format(
-                t=label, x=x, y=y, s=TILE, r=RADIUS, p=PANEL, b=BORDER
+            'fill="{n}" fill-opacity="{p}" stroke="{n}" '
+            'stroke-opacity="{b}" stroke-width="1"/>'.format(
+                t=label, x=x, y=y, s=TILE, r=RADIUS,
+                n=NEUTRAL, p=PANEL_OP, b=BORDER_OP
             )
         )
         parts.append(

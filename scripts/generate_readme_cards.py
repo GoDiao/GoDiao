@@ -33,17 +33,35 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "profile"
 README = ROOT / "README.md"
 
-# One palette for every card and every badge in the README: Garena red on black.
-BG = "#050505"        # near-black card ground
-PANEL = "#151515"     # tiles and empty heatmap cells
-BORDER = "#242424"
-TEXT = "#f2f2f2"
-MUTED = "#8c8c8c"
-ACCENT = "#e51d2a"    # Garena red
-ACCENT_DEEP = "#7a0d14"
+# One palette for every card in the README, built to sit on GitHub's light
+# canvas and its dark one without a second set of files.
+#
+# Nothing here is an opaque ground. Cards, tiles and rules are a neutral grey
+# at low alpha, so each tone is a relation to whatever is behind it rather
+# than a fixed colour: NEUTRAL at 0.10 lands on #f0f0f0 over white and
+# #1b1e24 over #0d1117, the same slight lift either way.
+#
+# The text tones are the compromise. No single colour clears 4.5:1 against
+# #ffffff and #0d1117 at once -- the best any colour manages on both is
+# 4.35:1, at a luminance near 0.19 -- so these sit in the band that clears
+# 3:1 on white, on dark, and on dark dimmed, and hierarchy comes from size
+# and weight instead of from brightness.
+NEUTRAL = "#808080"   # panels and rules, never without one of the alphas
+CARD_OP = "0.05"      # the card's own lift off the page
+PANEL_OP = "0.10"     # tiles, bar tracks, empty heatmap cells
+BORDER_OP = "0.30"
+TEXT = "#747474"      # 4.67:1 on white, 4.05:1 on dark, 3.18:1 on dimmed
+MUTED = "#929292"     # 3.11:1 on white, 6.08:1 on dark, 4.78:1 on dimmed
+ACCENT = "#e51d2a"    # Garena red, already 4.62:1 and 4.09:1 unchanged
+ACCENT_DEEP = "#b3202b"
 
-# Heatmap ramp, low to high, readable on the black ground.
-HEAT = ["#161616", "#4a0f14", "#8c141d", "#cc1a26", "#ff3b45"]
+# Heatmap and language ramps are one red at rising alpha rather than a ladder
+# of fixed colours. A ladder can only be built toward one ground: the old one
+# ran #161616 to #ff3b45, which was a ramp on black and a row of near-blacks
+# on white. As alpha it reads pink-to-red on the light canvas and dark-red-to
+# -red on the dark one.
+HEAT_OP = [None, 0.28, 0.48, 0.72, 1.0]   # None: the empty-day neutral
+LANG_OP = [1.0, 0.82, 0.66, 0.52, 0.42, 0.34]
 
 FONT = (
     "ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',"
@@ -266,14 +284,27 @@ def refresh_readme_stars(token):
     print("wrote README.md ({} entries)".format(len(repos)))
 
 
+def wash(opacity, color=NEUTRAL):
+    """A fill that reads the same on either canvas: one colour, low alpha."""
+    return 'fill="{c}" fill-opacity="{o}"'.format(c=color, o=opacity)
+
+
+def heat(level):
+    """Fill for one heatmap cell; level 0 is a day with no contributions."""
+    if level == 0:
+        return wash(PANEL_OP)
+    return wash("{:g}".format(HEAT_OP[level]), ACCENT)
+
+
 def frame(width, height, title=None):
     """Card background plus optional title; returns (svg_open, y_after_title)."""
     head = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
         'viewBox="0 0 {w} {h}" role="img" font-family="{f}">'
-        '<rect width="{w}" height="{h}" rx="10" fill="{bg}" '
-        'stroke="{br}" stroke-width="1"/>'
-    ).format(w=width, h=height, f=FONT, bg=BG, br=BORDER)
+        '<rect width="{w}" height="{h}" rx="10" {bg} '
+        'stroke="{n}" stroke-opacity="{bo}" stroke-width="1"/>'
+    ).format(w=width, h=height, f=FONT, bg=wash(CARD_OP), n=NEUTRAL,
+             bo=BORDER_OP)
     y = 20
     if title:
         head += (
@@ -296,9 +327,9 @@ def banner():
         ),
         "<defs>",
         '<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">',
-        '<stop offset="0%" stop-color="#000000"/>',
-        '<stop offset="60%" stop-color="#140406"/>',
-        '<stop offset="100%" stop-color="#26060a"/>',
+        '<stop offset="0%" stop-color="{}" stop-opacity="0.05"/>'.format(NEUTRAL),
+        '<stop offset="60%" stop-color="{}" stop-opacity="0.07"/>'.format(ACCENT),
+        '<stop offset="100%" stop-color="{}" stop-opacity="0.14"/>'.format(ACCENT),
         "</linearGradient>",
         '<linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">',
         '<stop offset="0%" stop-color="{}"/>'.format(ACCENT),
@@ -324,14 +355,14 @@ def banner():
         '<rect x="56" y="62" width="4" height="96" rx="2" fill="{}"/>'.format(ACCENT)
     )
     parts.append(
-        '<text x="82" y="106" fill="#ffffff" font-size="44" '
-        'font-weight="700" letter-spacing="0.5">{}</text>'.format(
-            escape(DISPLAY_NAME)
+        '<text x="82" y="106" fill="{c}" font-size="44" '
+        'font-weight="700" letter-spacing="0.5">{t}</text>'.format(
+            c=ACCENT, t=escape(DISPLAY_NAME)
         )
     )
     parts.append(
         '<text x="84" y="140" fill="{c}" font-size="18" '
-        'font-weight="500">{t}</text>'.format(c=ACCENT, t=escape(TAGLINE))
+        'font-weight="500">{t}</text>'.format(c=TEXT, t=escape(TAGLINE))
     )
 
     x = 84
@@ -339,8 +370,8 @@ def banner():
         width = 16 + int(len(chip) * 7.6)
         parts.append(
             '<rect x="{x}" y="176" width="{w}" height="30" rx="15" '
-            'fill="#131313" stroke="{s}" stroke-opacity="0.55"/>'.format(
-                x=x, w=width, s=ACCENT
+            '{bg} stroke="{s}" stroke-opacity="0.55"/>'.format(
+                x=x, w=width, bg=wash(PANEL_OP), s=ACCENT
             )
         )
         parts.append(
@@ -442,11 +473,14 @@ def stats_card(data):
         y = top + row * (tile_h + gap + 14)
         parts.append(
             '<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" '
-            'fill="{p}"/>'.format(x=x, y=y, w=tile_w, h=tile_h + 14, p=PANEL)
+            '{p}/>'.format(x=x, y=y, w=tile_w, h=tile_h + 14,
+                           p=wash(PANEL_OP))
         )
         parts.append(
-            '<text x="{x}" y="{y}" fill="#ffffff" font-size="20" '
-            'font-weight="700">{v}</text>'.format(x=x + 12, y=y + 26, v=value)
+            '<text x="{x}" y="{y}" fill="{c}" font-size="20" '
+            'font-weight="700">{v}</text>'.format(
+                x=x + 12, y=y + 26, c=TEXT, v=value
+            )
         )
         parts.append(
             '<text x="{x}" y="{y}" fill="{m}" font-size="11">{l}</text>'.format(
@@ -477,15 +511,16 @@ def langs_card(data):
         data["languages"].items(), key=lambda kv: kv[1], reverse=True
     )[:6]
     total = sum(size for _, size in ranked) or 1
-    # Brightest red for the largest share, fading to maroon down the ranking.
-    ramp = ["#ff3b45", "#e51d2a", "#bf1620", "#8f1017", "#630b10", "#3d070a"]
+    # One red fading down the ranking by alpha. The maroons this replaced
+    # were only a fade against black; on white they read as six solid reds.
+    ramp = [wash("{:g}".format(a), ACCENT) for a in LANG_OP]
 
     parts = [frame(w, h, "Most used languages")[0]]
 
     bar_x, bar_w, bar_y = 22, w - 44, 54
     parts.append(
         '<rect x="{x}" y="{y}" width="{w}" height="10" rx="5" '
-        'fill="{p}"/>'.format(x=bar_x, y=bar_y, w=bar_w, p=PANEL)
+        '{p}/>'.format(x=bar_x, y=bar_y, w=bar_w, p=wash(PANEL_OP))
     )
     parts.append(
         '<clipPath id="barclip"><rect x="{x}" y="{y}" width="{w}" '
@@ -502,7 +537,7 @@ def langs_card(data):
         next_edge = round(bar_w * cumulative / total, 1)
         parts.append(
             '<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="10" '
-            'fill="{c}" clip-path="url(#barclip)"/>'.format(
+            '{c} clip-path="url(#barclip)"/>'.format(
                 x=bar_x + edge, y=bar_y, w=next_edge - edge, c=ramp[index]
             )
         )
@@ -515,7 +550,7 @@ def langs_card(data):
         y = row_y + row * 28
         pct = 100.0 * size / total
         parts.append(
-            '<circle cx="{x}" cy="{y}" r="5" fill="{c}"/>'.format(
+            '<circle cx="{x}" cy="{y}" r="5" {c}/>'.format(
                 x=x + 5, y=y - 4, c=ramp[index]
             )
         )
@@ -599,11 +634,11 @@ def activity_card(data):
             y = top + day["weekday"] * step
             parts.append(
                 '<rect x="{x}" y="{y}" width="{c}" height="{c}" rx="2.5" '
-                'fill="{f}"><title>{d}: {n}</title></rect>'.format(
+                '{f}><title>{d}: {n}</title></rect>'.format(
                     x=left + wi * step,
                     y=y,
                     c=cell,
-                    f=HEAT[level(day["contributionCount"])],
+                    f=heat(level(day["contributionCount"])),
                     d=day["date"],
                     n=day["contributionCount"],
                 )
@@ -617,23 +652,23 @@ def activity_card(data):
         )
 
     legend_y = top + 7 * step + 18
-    swatch_x = w - 24 - 30 - len(HEAT) * step
+    swatch_x = w - 24 - 30 - len(HEAT_OP) * step
     parts.append(
         '<text x="{x}" y="{y}" fill="{m}" font-size="10" '
         'text-anchor="end">Less</text>'.format(
             x=swatch_x - 6, y=legend_y + 9, m=MUTED
         )
     )
-    for index, color in enumerate(HEAT):
+    for index in range(len(HEAT_OP)):
         parts.append(
             '<rect x="{x}" y="{y}" width="{c}" height="{c}" rx="2.5" '
-            'fill="{f}"/>'.format(
-                x=swatch_x + index * step, y=legend_y, c=cell, f=color
+            '{f}/>'.format(
+                x=swatch_x + index * step, y=legend_y, c=cell, f=heat(index)
             )
         )
     parts.append(
         '<text x="{x}" y="{y}" fill="{m}" font-size="10">More</text>'.format(
-            x=swatch_x + len(HEAT) * step + 4, y=legend_y + 9, m=MUTED
+            x=swatch_x + len(HEAT_OP) * step + 4, y=legend_y + 9, m=MUTED
         )
     )
     parts.append("</svg>")
