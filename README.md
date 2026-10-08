@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="./profile/banner.svg" alt="DIAO Shengjia — AI Engineer at Garena (Sea), AI/ML Researcher" />
+<img width="560" src="./profile/banner.svg" alt="DIAO Shengjia — AI Engineer at Garena (Sea), AI/ML Researcher" />
 
 <br/>
 

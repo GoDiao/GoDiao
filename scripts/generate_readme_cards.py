@@ -319,18 +319,29 @@ def frame(width, height, title=None):
 # banner.svg
 # --------------------------------------------------------------------------
 def banner():
-    w, h = 1200, 260
+    """Name, role and chips as typography; no ground of its own.
+
+    This used to be a 1200x260 plate with a dark gradient and a grid of 460
+    red dots. Both were built for a black page: on the light canvas the
+    gradient became a pink wash and the dots became specks. The content only
+    ever reached x=602, so more than half the plate was empty -- unnoticeable
+    while it was dark, obvious once it was pale.
+
+    So there is no plate. The canvas is cropped to the type, and what used to
+    be a background is now the page itself, whichever one it is.
+    """
+    left = 28
+    chips = [(chip, 16 + int(len(chip) * 7.6)) for chip in CHIPS]
+    chips_w = sum(width for _, width in chips) + 10 * (len(chips) - 1)
+    w = left + max(chips_w, 500) + 32
+    h = 186
+
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
         'viewBox="0 0 {w} {h}" role="img" font-family="{f}">'.format(
             w=w, h=h, f=FONT
         ),
         "<defs>",
-        '<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">',
-        '<stop offset="0%" stop-color="{}" stop-opacity="0.05"/>'.format(NEUTRAL),
-        '<stop offset="60%" stop-color="{}" stop-opacity="0.07"/>'.format(ACCENT),
-        '<stop offset="100%" stop-color="{}" stop-opacity="0.14"/>'.format(ACCENT),
-        "</linearGradient>",
         '<linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">',
         '<stop offset="0%" stop-color="{}"/>'.format(ACCENT),
         '<stop offset="100%" stop-color="{}" stop-opacity="0"/>'.format(
@@ -338,44 +349,29 @@ def banner():
         ),
         "</linearGradient>",
         "</defs>",
-        '<rect width="{w}" height="{h}" rx="14" fill="url(#g)"/>'.format(w=w, h=h),
+        '<rect x="2" y="10" width="4" height="96" rx="2" fill="{}"/>'.format(
+            ACCENT
+        ),
+        '<text x="{x}" y="54" fill="{c}" font-size="44" '
+        'font-weight="700" letter-spacing="0.5">{t}</text>'.format(
+            x=left, c=ACCENT, t=escape(DISPLAY_NAME)
+        ),
+        '<text x="{x}" y="88" fill="{c}" font-size="18" '
+        'font-weight="500">{t}</text>'.format(
+            x=left + 2, c=TEXT, t=escape(TAGLINE)
+        ),
     ]
 
-    # Faint dot grid, denser toward the right edge.
-    for col in range(20, w, 26):
-        for row in range(20, h, 26):
-            opacity = 0.05 + 0.22 * (col / w)
-            parts.append(
-                '<circle cx="{x}" cy="{y}" r="1.4" fill="{c}" opacity="{o:.3f}"/>'.format(
-                    x=col, y=row, c=ACCENT, o=opacity
-                )
-            )
-
-    parts.append(
-        '<rect x="56" y="62" width="4" height="96" rx="2" fill="{}"/>'.format(ACCENT)
-    )
-    parts.append(
-        '<text x="82" y="106" fill="{c}" font-size="44" '
-        'font-weight="700" letter-spacing="0.5">{t}</text>'.format(
-            c=ACCENT, t=escape(DISPLAY_NAME)
-        )
-    )
-    parts.append(
-        '<text x="84" y="140" fill="{c}" font-size="18" '
-        'font-weight="500">{t}</text>'.format(c=TEXT, t=escape(TAGLINE))
-    )
-
-    x = 84
-    for chip in CHIPS:
-        width = 16 + int(len(chip) * 7.6)
+    x = left + 2
+    for chip, width in chips:
         parts.append(
-            '<rect x="{x}" y="176" width="{w}" height="30" rx="15" '
+            '<rect x="{x}" y="124" width="{w}" height="30" rx="15" '
             '{bg} stroke="{s}" stroke-opacity="0.55"/>'.format(
                 x=x, w=width, bg=wash(PANEL_OP), s=ACCENT
             )
         )
         parts.append(
-            '<text x="{x}" y="196" fill="{c}" font-size="13" '
+            '<text x="{x}" y="144" fill="{c}" font-size="13" '
             'font-weight="500">{t}</text>'.format(
                 x=x + 12, c=TEXT, t=escape(chip)
             )
@@ -383,7 +379,9 @@ def banner():
         x += width + 10
 
     parts.append(
-        '<rect x="82" y="224" width="520" height="2" fill="url(#rule)"/>'
+        '<rect x="{x}" y="172" width="{w}" height="2" fill="url(#rule)"/>'.format(
+            x=left, w=chips_w
+        )
     )
     parts.append("</svg>")
     return "".join(parts)
