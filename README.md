@@ -108,7 +108,8 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 **Merged upstream fixes**
 
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `73.6k★` — pre-indexed code knowledge graph for coding agents, 100% local. Co-authored the Go receiver and package resolution fix ([#2361](https://github.com/colbymchenry/codegraph/pull/2361)), credited in the changelog.
+- [**openclaw**](https://github.com/openclaw/openclaw) `391.7k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `73.6k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.6k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `11.7k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8k★` — open-source Claude Design alternative. BYOK, local-first.
