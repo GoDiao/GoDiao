@@ -102,12 +102,6 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-**Core contributor**
-
-- [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.1k★` — terminal AI coding assistant. Session persistence and memory.
-
-**Merged upstream fixes**
-
 - [**openclaw**](https://github.com/openclaw/openclaw) `391.7k★` — cross-platform AI agent runtime, any OS, any platform.
 - [**codegraph**](https://github.com/colbymchenry/codegraph) `73.7k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.6k★` — code search MCP; a whole codebase as agent context.
@@ -118,6 +112,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 - [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `1.9k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.4k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
+- [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.1k★` — terminal AI coding assistant. Session persistence and memory.
 
 ## Toolbox
 
