@@ -102,8 +102,8 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `392.7k★` — cross-platform AI agent runtime, any OS, any platform.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `74.7k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**openclaw**](https://github.com/openclaw/openclaw) `392.8k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `74.9k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.6k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.4k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.1k★` — open-source Claude Design alternative. BYOK, local-first.
@@ -112,7 +112,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 - [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `1.9k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.4k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
-- [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.1k★` — terminal AI coding assistant. Session persistence and memory.
+- [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.2k★` — terminal AI coding assistant. Session persistence and memory.
 
 ## Toolbox
 
