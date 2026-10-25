@@ -102,10 +102,10 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `392.9k★` — cross-platform AI agent runtime, any OS, any platform.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `75.1k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**openclaw**](https://github.com/openclaw/openclaw) `393k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `75.2k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.6k★` — code search MCP; a whole codebase as agent context.
-- [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.4k★` — AI SRE agents with 60+ integrations.
+- [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.5k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.1k★` — open-source Claude Design alternative. BYOK, local-first.
 - [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.3k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
