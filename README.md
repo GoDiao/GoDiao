@@ -102,13 +102,13 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `393.4k★` — cross-platform AI agent runtime, any OS, any platform.
-- [**vllm**](https://github.com/vllm-project/vllm) `95.9k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
+- [**openclaw**](https://github.com/openclaw/openclaw) `393.5k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**vllm**](https://github.com/vllm-project/vllm) `96k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
 - [**codegraph**](https://github.com/colbymchenry/codegraph) `76k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.7k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.6k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.1k★` — open-source Claude Design alternative. BYOK, local-first.
-- [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.3k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
+- [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.4k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
 - [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `1.9k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
