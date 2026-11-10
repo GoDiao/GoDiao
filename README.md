@@ -102,9 +102,9 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `394.2k★` — cross-platform AI agent runtime, any OS, any platform.
-- [**vllm**](https://github.com/vllm-project/vllm) `96.6k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.2k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**openclaw**](https://github.com/openclaw/openclaw) `394.3k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**vllm**](https://github.com/vllm-project/vllm) `96.7k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.3k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.7k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.8k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.2k★` — open-source Claude Design alternative. BYOK, local-first.
@@ -114,7 +114,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `2k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.5k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
 - [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.2k★` — terminal AI coding assistant. Session persistence and memory.
-- [**system1-agents**](https://github.com/ThinkFlowLab/system1-agents) `181★` — System 1 decision models as the brain for agents: browser use, computer use, games and robotics.
+- [**system1-agents**](https://github.com/ThinkFlowLab/system1-agents) `182★` — System 1 decision models as the brain for agents: browser use, computer use, games and robotics.
 
 ## Toolbox
 
