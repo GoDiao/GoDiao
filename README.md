@@ -50,12 +50,12 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/GoDiao/dreamcoder">dreamcoder</a></h3>
-      <p>Desktop GUI for Claude Code — session management, integrated terminal, multi-provider.</p>
+      <p>Locally run, multi-provider AI coding workspace — sessions, terminal, and tool activity in one desktop app.</p>
       <a href="https://github.com/GoDiao/dreamcoder/stargazers"><img src="https://img.shields.io/github/stars/GoDiao/dreamcoder?style=flat-square&logo=github&color=e51d2a&labelColor=0a0a0a" alt="dreamcoder stars" /></a>
       <a href="https://github.com/GoDiao/dreamcoder/releases"><img src="https://img.shields.io/github/downloads/GoDiao/dreamcoder/total?style=flat-square&logo=github&label=downloads&color=ff3b45&labelColor=0a0a0a" alt="dreamcoder downloads" /></a>
       <a href="https://github.com/GoDiao/dreamcoder/forks"><img src="https://img.shields.io/github/forks/GoDiao/dreamcoder?style=flat-square&logo=github&color=8f1017&labelColor=0a0a0a" alt="dreamcoder forks" /></a>
       <a href="https://github.com/GoDiao/dreamcoder/releases/latest"><img src="https://img.shields.io/github/v/release/GoDiao/dreamcoder?style=flat-square&color=8f1017&labelColor=0a0a0a" alt="dreamcoder latest release" /></a>
-      <img src="https://img.shields.io/badge/Tauri-0a0a0a?style=flat-square&logo=tauri" alt="Tauri" />
+      <img src="https://img.shields.io/badge/Electron-0a0a0a?style=flat-square&logo=electron" alt="Electron" />
       <img src="https://img.shields.io/badge/React-0a0a0a?style=flat-square&logo=react" alt="React" />
     </td>
     <td width="50%" valign="top">
@@ -111,9 +111,11 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 - [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.5k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
 - [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
+- [**vllm-metal**](https://github.com/vllm-project/vllm-metal) `2k★` — community hardware plugin for vLLM on Apple Silicon.
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `2k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.5k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
 - [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.2k★` — terminal AI coding assistant. Session persistence and memory.
+- [**UniRL**](https://github.com/Tencent-Hunyuan/UniRL) `1k★` — framework for unified multimodal model reinforcement learning.
 - [**system1-agents**](https://github.com/ThinkFlowLab/system1-agents) `182★` — System 1 decision models as the brain for agents: browser use, computer use, games and robotics.
 
 ## Toolbox
