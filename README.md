@@ -104,7 +104,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 - [**openclaw**](https://github.com/openclaw/openclaw) `394.4k★` — cross-platform AI agent runtime, any OS, any platform.
 - [**vllm**](https://github.com/vllm-project/vllm) `96.9k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.5k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.6k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.7k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.8k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.2k★` — open-source Claude Design alternative. BYOK, local-first.
@@ -116,7 +116,7 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.5k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
 - [**MiniCode**](https://github.com/LiuMengxuan04/MiniCode) `1.2k★` — terminal AI coding assistant. Session persistence and memory.
 - [**UniRL**](https://github.com/Tencent-Hunyuan/UniRL) `1k★` — framework for unified multimodal model reinforcement learning.
-- [**system1-agents**](https://github.com/ThinkFlowLab/system1-agents) `182★` — System 1 decision models as the brain for agents: browser use, computer use, games and robotics.
+- [**system1-agents**](https://github.com/ThinkFlowLab/system1-agents) `183★` — System 1 decision models as the brain for agents: browser use, computer use, games and robotics.
 
 ## Toolbox
 
