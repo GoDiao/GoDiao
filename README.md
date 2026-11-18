@@ -102,15 +102,15 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `394.6k★` — cross-platform AI agent runtime, any OS, any platform.
-- [**vllm**](https://github.com/vllm-project/vllm) `97.1k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.8k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**openclaw**](https://github.com/openclaw/openclaw) `394.7k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**vllm**](https://github.com/vllm-project/vllm) `97.2k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.9k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.7k★` — code search MCP; a whole codebase as agent context.
-- [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.8k★` — AI SRE agents with 60+ integrations.
+- [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.9k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.2k★` — open-source Claude Design alternative. BYOK, local-first.
 - [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.5k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
-- [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.2k★` — backtesting and deployment for trading strategies.
+- [**investing-algorithm-framework**](https://github.com/coding-kitties/investing-algorithm-framework) `2.3k★` — backtesting and deployment for trading strategies.
 - [**vllm-metal**](https://github.com/vllm-project/vllm-metal) `2k★` — community hardware plugin for vLLM on Apple Silicon.
 - [**open-file-viewer**](https://github.com/xushanpei/open-file-viewer) `2k★` — framework-agnostic embedded viewer for PDF, Office, media, 3D and GIS files.
 - [**backpass**](https://github.com/kunchenguid/backpass) `1.5k★` — trains AGENTS.md by gradient descent instead of hand-writing it.
