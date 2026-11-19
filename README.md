@@ -102,9 +102,9 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `394.7k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**openclaw**](https://github.com/openclaw/openclaw) `394.8k★` — cross-platform AI agent runtime, any OS, any platform.
 - [**vllm**](https://github.com/vllm-project/vllm) `97.2k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `77.9k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `78.1k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.7k★` — code search MCP; a whole codebase as agent context.
 - [**opensre**](https://github.com/Tracer-Cloud/opensre) `12.9k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.2k★` — open-source Claude Design alternative. BYOK, local-first.
