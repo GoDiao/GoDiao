@@ -102,11 +102,11 @@ AI Engineer at **Garena (Sea)**, working on agentic AI and AI infrastructure. Pr
 
 ## Open Source Contributions
 
-- [**openclaw**](https://github.com/openclaw/openclaw) `395.1k★` — cross-platform AI agent runtime, any OS, any platform.
-- [**vllm**](https://github.com/vllm-project/vllm) `97.5k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
-- [**codegraph**](https://github.com/colbymchenry/codegraph) `78.6k★` — pre-indexed code knowledge graph for coding agents, 100% local.
+- [**openclaw**](https://github.com/openclaw/openclaw) `395.2k★` — cross-platform AI agent runtime, any OS, any platform.
+- [**vllm**](https://github.com/vllm-project/vllm) `97.6k★` — high-throughput, memory-efficient inference and serving engine for LLMs.
+- [**codegraph**](https://github.com/colbymchenry/codegraph) `78.7k★` — pre-indexed code knowledge graph for coding agents, 100% local.
 - [**claude-context**](https://github.com/zilliztech/claude-context) `12.7k★` — code search MCP; a whole codebase as agent context.
-- [**opensre**](https://github.com/Tracer-Cloud/opensre) `15k★` — AI SRE agents with 60+ integrations.
+- [**opensre**](https://github.com/Tracer-Cloud/opensre) `15.4k★` — AI SRE agents with 60+ integrations.
 - [**open-codesign**](https://github.com/OpenCoworkAI/open-codesign) `8.3k★` — open-source Claude Design alternative. BYOK, local-first.
 - [**semantic-router**](https://github.com/vllm-project/semantic-router) `6.5k★` — programmable Mixture-of-Models router for heterogeneous LLM inference.
 - [**optillm**](https://github.com/algorithmicsuperintelligence/optillm) `4.3k★` — optimizing inference proxy: MoA, CoT, MCTS.
